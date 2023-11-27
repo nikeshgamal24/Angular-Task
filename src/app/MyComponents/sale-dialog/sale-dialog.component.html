@@ -1,0 +1,22 @@
+<div class="sale-add-dialog">
+    <h2>{{inputData.title}}</h2>
+    <form class="add-sale-form container" (ngSubmit)="submitSaleDetails()">
+        <mat-form-field>
+            <mat-label>Product Name</mat-label>
+            <input matInput type="text" [(ngModel)]="name" placeholder="Enter Product Name" id="productName" name="productName">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Rate</mat-label>
+            <input matInput type="number" [(ngModel)]="rate" placeholder="Enter Product Rate" id="productRate" name="productRate">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label class="mb-4">Quantity</mat-label>
+            <input matInput type="text" [(ngModel)]="quantity" id="date " placeholder="Enter Product Quantity" name="quantity ">
+        </mat-form-field>
+        <mat-form-field>
+            <!-- <mat-label>Inserted Date</mat-label> -->
+            <input matInput type="date" [(ngModel)]="date" id="date" name="date">
+        </mat-form-field>
+        <button type="submit" class="form-btn btn btn-primary">{{inputData.buttonText}}</button>
+    </form>
+</div>

@@ -1,0 +1,17 @@
+.invoice-add-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-invoice-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#invoiceDetailsSection {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,51 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .main {
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        box-sizing: inherit;
+        position: relative;
+        /* border: 2px solid hotpink; */
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+    }
+    
+    .form-btn {
+        padding: 0.5em 1em;
+        background-color: dodgerblue;
+        font-size: 1.2rem;
+        border: 1px solid dodgerblue;
+        border-radius: 5px;
+        color: white;
+        font-weight: 500;
+    }
+    
+    .navbar {
+        display: flex;
+    }
+    
+    .navbar li {
+        list-style-type: none;
+        display: inline-block;
+        margin: 1em;
+    }
+    
+    .navbar li a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: black;
+    }

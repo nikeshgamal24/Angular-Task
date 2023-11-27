@@ -1,0 +1,12 @@
+.customer-edit-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.edit-customer-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

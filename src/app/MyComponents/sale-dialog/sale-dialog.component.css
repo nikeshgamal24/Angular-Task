@@ -1,0 +1,12 @@
+.sale-add-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-sale-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
