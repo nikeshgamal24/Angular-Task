@@ -3,7 +3,10 @@ import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+// import { Customer } from '../../Customer';
+import { HttpClient } from '@angular/common/http';
 import { Customer } from '../../Customer';
+import { CustomersComponent } from '../customers/customers.component';
 // import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 
@@ -15,23 +18,33 @@ import { Customer } from '../../Customer';
   styleUrl: './customer-add-dialog.component.css'
 })
 export class CustomerAddDialogComponent {
-  name!:string;
-  date!:Date;
+  customerName!:string;
+  insertDate!:Date;
+  url:string = 'http://localhost:5307/api'+'/Customer';
 
-  @Output() customerAdd:EventEmitter<Customer>= new EventEmitter();
+  constructor(private http:HttpClient){
+    
+  }
+
+  @Output() customerAdd:EventEmitter<any>= new EventEmitter();
 
   
-  addCustomer(){
+  addCustomer(form:any){
     console.log("Add Customer Button Clicked");
-    console.log(this.name,this.date);
-    const product= {
-      customerId:4,
-      name:this.name,
-      insertDate:this.date.toString(),
-      isEdit:false
+    console.log(form.value);
+    console.log(this.insertDate.toString());
+    const customerDetails= {
+      customerId:6,
+      customerName:form.value.customerName,
+      insertDate:this.insertDate.toString()
     }
-    // console.log(product);
-    this.customerAdd.emit(product);
-    // this.dialogRef.close(product);
+    console.log(customerDetails);
+    // // console.log(product);
+    this.http.post(this.url,customerDetails).subscribe((details:any)=>{
+      console.log(details);
+      console.log('post function');
+      this.customerAdd.emit(details);
+    });
+    // // this.dialogRef.close(product);
   }
 }

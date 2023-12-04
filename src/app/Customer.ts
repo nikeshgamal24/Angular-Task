@@ -1,7 +1,6 @@
 export class Customer{
     // CustomerId, Name,InsertDate
     customerId!:number
-    name!:string
+    customerName!:string
     insertDate!:string
-    isEdit:boolean
 }

@@ -1,13 +1,13 @@
 <div class="customer-add-dialog">
     <h2>Add New Customer</h2>
-    <form class="add-customer-form container" (ngSubmit)="addCustomer()">
+    <form class="add-customer-form container" (ngSubmit)="addCustomer(form)" #form="ngForm">
         <mat-form-field>
             <mat-label>Name</mat-label>
-            <input matInput type="text" [(ngModel)]="name" placeholder=" Enter your name " id="username " name="username">
+            <input matInput type="text" [(ngModel)]="customerName" placeholder=" Enter your name " id="customerName " name="customerName">
         </mat-form-field>
         <mat-form-field>
             <!-- <mat-label class="mb-4">Today's Date</mat-label> -->
-            <input matInput type="Date" [(ngModel)]="date" id="date " name="date ">
+            <input matInput type="date" [(ngModel)]="insertDate" id="insertDate " name="insertDate ">
         </mat-form-field>
         <button type="submit" class="form-btn btn btn-primary">Submit Form</button>
     </form>

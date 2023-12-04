@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
 import { Store } from './Store';
+// import {FormsMod}
 import { User } from './User';
 import { RouterLink } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
@@ -19,7 +19,7 @@ import {MatDialogModule} from '@angular/material/dialog';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports:[MatInputModule,MatFormFieldModule,FormsModule,MatButtonModule,FormsModule,RouterLink,RouterLinkActive,RouterOutlet,MatDialogModule],
+  imports:[MatInputModule,MatFormFieldModule,MatButtonModule,RouterLink,RouterLinkActive,RouterOutlet,MatDialogModule],
 })
 export class AppComponent {
   stores:Store[] | undefined;
